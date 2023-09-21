@@ -1,0 +1,49 @@
+.contact-input {
+    width: 80%;
+    border: 0;
+    border-bottom: 3px solid rgb(23, 19, 19);
+    outline: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color:  black;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color .2s;
+}
+
+.contact-label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: .2s;
+    font-size: .2s;
+    color: #9b9b9b;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+
+/* .modal-content{
+    background-image: url(../../assets/contact-hm-bg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: left top;
+        background-attachment: fixed;
+} */
+
+.modal-content{
+    color:black
+}
+
+.select_box
+{
+    width: 80%;
+    border: 0;
+        border-bottom: 3px solid rgb(23, 19, 19);
+        outline: 0;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: black;
+        padding: 7px 0;
+        background: transparent;
+        transition: border-color .2s;
+}

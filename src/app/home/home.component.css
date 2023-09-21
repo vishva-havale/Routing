@@ -1,0 +1,152 @@
+.home{
+    background: url(../../assets/landing-page-bg.jpg);
+    animation: zoom-out 10s;
+}
+.why-rbis {
+    background: url(../../assets/strength-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-attachment: fixed;
+}
+
+.service-card h5{
+    position: absolute;
+    color: white;
+    inset: auto auto 20px 30px;
+    transition: inset .3s .3s ease-out; 
+    
+    
+}
+
+.service-card p{
+    opacity: 0;
+    inset: auto auto 30px 30px;
+    position: absolute;
+    transition: opacity .3s ease-out;
+}
+
+.service-card:hover h5{
+    inset:auto auto 215px 30px;
+    transition: inset .3s ease-in;
+
+}
+
+.service-card:hover p{
+    opacity: 1 !important;
+    transition: opacity .5s .1s ease-in;
+}
+.card-img-top{
+    height: 90px;
+    width: 70px;
+}
+.why-rbis-cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 25px;
+}
+.block-img{
+    height: 100px !important;
+    width: 100px !important;
+}
+.carousel-item{
+ width: 100% !important;
+ height: 400px !important;
+}
+.feedback-container{
+    background-image: url(../../assets/feedback-bg.jpg);
+    position: relative;
+    height: 600px;
+}
+.feedback-fg{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+.carousel{
+    position: relative;
+}
+.fd-profile-img{
+    height: 85px !important;
+    width: 85px !important;
+    border-radius: 50px;
+}
+.contact-container{
+    background-image: url(../../assets/contact-hm-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-attachment: fixed;
+    color:white;
+    height: auto;
+    margin-top: 50px;
+    padding-bottom: 50px !important;
+}
+.contact-input{
+    /* width: 80%; */
+    border: 0;
+    border-bottom: 3px solid #fff;
+    outline: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    padding: 7px 0;
+    background: transparent;
+    transition:border-color .2s;
+}
+.contact-label{
+    font-size: 1rem;
+    cursor: text;
+    top: 20px;
+    position: absolute;
+    display: block;
+    transition: .2s;
+    color: #9b9b9b;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.contact-btn{
+    background-color: #0dcaf0;
+    padding: 0.6rem 3rem;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 8px;
+    border-color: #0dcaf0;
+    margin-top: 1.5rem;
+}
+
+
+.input-div{
+    position: relative;
+    padding:15px 0 0;
+    width: 75%;
+}
+
+@media (min-width: 400px) {
+    .office-work-img {
+        width: 90% !important;
+        height: auto !important;
+        max-width: 100% !important;
+        max-height: 100% !important;
+    }
+}
+@media (max-width:850px){
+    .first-p {
+            font-size: 24px !important;
+        }
+    .para-div{
+        width: 50% !important;
+        margin-top: 20% !important;
+    }
+    .home{
+        width: 100% !important;
+        height: 30rem !important;
+        max-width: 100% !important;
+        max-height: 100% !important;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}

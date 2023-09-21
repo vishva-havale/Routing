@@ -1,0 +1,102 @@
+<div class="bg-warning container-fluid">
+  <div class="text-center">
+    <h1 class="">Contact Us</h1>
+  </div>
+  <div class="row">
+    <div class="col-lg-6">
+      <!-- <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+        <input
+          type="text"
+          placeholder="Enter name"
+          name="user"
+          formControlName="user"
+        />
+        <br />
+        <span style="color: red" *ngIf="user && user.invalid && user.touched"
+          >This field is not valid</span
+        >
+        <br />
+        <input
+          type="password"
+          placeholder="Enter password"
+          name="password"
+          formControlName="password"
+        />
+        <br />
+        <br />
+        <button [disabled]="loginForm.invalid">Login</button>
+        <div class="spinner-border text-muted"></div>
+      </form> -->
+      <button class="btn btn-success" (click)="OpenContactComponent()">
+        ContactResponce
+      </button>
+    </div>
+    <div class="col-lg-6">
+      <form #ContactForm="ngForm" (ngSubmit)="loginUser(ContactForm.value)">
+        <div class="row mt-3">
+          <div class="col-lg-6">
+            <input
+              class="form-control form-control-lg"
+              type="text"
+              placeholder="First Name"
+              name="FirstName"
+              ngModel
+            />
+          </div>
+          <div class="col-lg-6 mt-lg-0 mt-3">
+            <input
+              class="form-control form-control-lg"
+              type="text"
+              placeholder="Last Name"
+              name="LastName"
+              ngModel
+            />
+          </div>
+        </div>
+        <div class="mt-3">
+          <input
+            type="number"
+            placeholder="Contact Number"
+            name="ContactNumber"
+            class="form-control form-control-lg"
+            ngModel
+          />
+        </div>
+        <div class="mt-3">
+          <input
+            class="form-control form-control-lg"
+            type="email"
+            placeholder="Email"
+            name="Email"
+            ngModel
+          />
+          <!-- formControlName="user"
+          <span style="color: red" *ngIf="user && user.invalid && user.touched"
+            >This field is not valid</span
+          > -->
+        </div>
+        <div class="mt-3">
+          <textarea
+            class="form-control textarea-form-control-lg"
+            type="text"
+            placeholder="Message"
+            rows="4"
+            ngModel
+            name="Message"
+          >
+          </textarea>
+        </div>
+        <div class="row mt-3">
+          <div class="col text-center">
+            <button
+              style="background-color: #0dcaf0 !important"
+              class="btn btn-blue w-100 px-5 text-center"
+            >
+              submit
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

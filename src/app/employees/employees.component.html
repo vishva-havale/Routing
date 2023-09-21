@@ -1,0 +1,399 @@
+<div class="container vh-100 bg-info" style="padding-top: 50px">
+  <div class="d-flex">
+    <div class="col-8 col-xs-9 col-sm-9 col-lg-9 col-md-9">
+      <h1 class="mt-3">Employees</h1>
+    </div>
+    <div class="col-4 col-xs-3 col-sm-3 col-lg-3 col-md-3 text-center">
+      <!-- Button trigger modal -->
+      <button
+        type="button"
+        class="btn btn-primary mt-4"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        Add Employee
+      </button>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">
+                Add Employee
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form
+                #contactForm="ngForm"
+                (ngSubmit)="addEmployeeFormData(contactForm.value)"
+              >
+                <div class="row" style="margin-top: 1.5rem">
+                  <div class="col-sm-12 col-md-6">
+                    <div class="form__group field">
+                      <input
+                        class="contact-input"
+                        ngModel
+                        id="name"
+                        name="name"
+                        type="text"
+                        placeholder="Name"
+                      />
+                      <!-- <label class="contact-label" for="name"
+                        >First Name*</label
+                      > -->
+                    </div>
+                    <div class="form__group field" style="margin-top: 1.5rem">
+                      <input
+                        class="contact-input"
+                        ngModel
+                        name="mobile"
+                        type="text"
+                        placeholder="Mobile"
+                      />
+                      <!-- <label class="contact-label" for="lastname"
+                        >Last Name</label
+                      > -->
+                    </div>
+                    <div class="form__group field" style="margin-top: 1.5rem">
+                      <input
+                        class="contact-input"
+                        ngModel
+                        name="salary"
+                        type="text"
+                        placeholder="salary"
+                      />
+                      <!-- <label class="contact-label" for="number">Mobile</label> -->
+                    </div>
+                    <div style="margin-top: 1.5rem">
+                      <!-- <label for="state-select">State</label><br /> -->
+                      <select
+                        class="select_box"
+                        id="state-select"
+                        [(ngModel)]="selectedState"
+                        (ngModelChange)="handleStateChange(selectedState)"
+                        name="State"
+                      >
+                        <option value="">--State--</option>
+                        <option
+                          *ngFor="let state of myDictionary.states"
+                          [value]="state.state"
+                        >
+                          {{ state.state }}
+                        </option>
+                      </select>
+                    </div>
+                    <div class="form__group field" style="margin-top: 1.5rem">
+                      <input
+                        class="contact-input"
+                        ngModel
+                        name="city"
+                        type="text"
+                        placeholder="City"
+                      />
+                      <!-- <label class="contact-label" for="City">City</label> -->
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-6">
+                    <div class="">
+                      <input
+                        class="contact-input"
+                        ngModel
+                        id="email"
+                        name="email"
+                        type="text"
+                        placeholder="email"
+                      />
+                      <!-- <label class="contact-label" for="salary"
+                        >Salary</label
+                      > -->
+                    </div>
+                    <div class="">
+                      <textarea
+                        rows="4"
+                        class="contact-input"
+                        ngModel
+                        name="address"
+                        placeholder="address"
+                      ></textarea>
+                      <!-- <label class="contact-label" for="email">Email</label> -->
+                      <br />
+                    </div>
+                    <div style="margin-top: 1.5rem">
+                      <!-- <label for="district-select">District</label><br /> -->
+                      <select
+                        class="select_box"
+                        id="district-select"
+                        [(ngModel)]="selectedDistrict"
+                        name="district"
+                      >
+                        <option value="">--District--</option>
+                        <option
+                          *ngFor="let district of districts"
+                          [value]="district"
+                        >
+                          {{ district }}
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <hr />
+                <div class="mt-3">
+                  <button class="btn btn-success" data-bs-dismiss="modal">
+                    submit
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-secondary mx-3"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <table class="table" *ngIf="data && data.length > 0">
+    <thead>
+      <tr class="text-center">
+        <th>ID</th>
+        <th>NAME</th>
+        <th>EMAIL</th>
+        <th>PHONE</th>
+        <th>SALARY</th>
+        <th>OPTIONS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="text-center" *ngFor="let Emp of data">
+        <td>{{ Emp.emp_id }}</td>
+        <td>
+          {{ Emp.name }}
+          <div *ngIf="selectedEmployee === Emp">
+            <hr />
+            <strong>Address</strong><br />
+            {{ selectedEmployee.address }}
+          </div>
+        </td>
+        <td>
+          {{ Emp.email }}
+          <div *ngIf="selectedEmployee === Emp">
+            <hr />
+            <strong>City</strong> <br />
+            {{ selectedEmployee.city }}
+          </div>
+        </td>
+        <td>
+          {{ Emp.mobile }}
+          <div *ngIf="selectedEmployee === Emp">
+            <hr />
+            <strong>District</strong> <br />
+            {{ selectedEmployee.district }}
+          </div>
+        </td>
+        <td>
+          {{ Emp.salary }}
+          <div *ngIf="selectedEmployee === Emp">
+            <hr />
+            <strong>State</strong> <br />
+            {{ selectedEmployee.state }}
+          </div>
+        </td>
+        <td>
+          <button class="btn btn-info" (click)="toggleDetails(Emp)">
+            More
+          </button>
+          <button
+            class="btn btn-danger mx-3"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal2"
+            (click)="deleteEmployeeId(Emp.emp_id)"
+          >
+            Delete
+          </button>
+          <!-- <button class="btn btn-warning mx-2">Update</button> -->
+          <button
+            type="button"
+            class="btn btn-warning"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal1"
+            (click)="EmployeeFieldData(Emp)"
+          >
+            Update
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- <p *ngIf="!data || data.length <= 0">NO Employees Found</p> -->
+
+  <!-- Modal -->
+  <div
+    class="modal fade"
+    id="exampleModal1"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">
+            Update Employee
+          </h1>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <form
+            #contactForm1="ngForm"
+            (ngSubmit)="updateEmployeeFormData(contactForm1.value)"
+          >
+            <div class="row" style="margin-top: 1.5rem">
+              <div class="col-sm-12 col-md-6">
+                <div class="form__group field">
+                  <input
+                    type="hidden"
+                    name="emp_id"
+                    [ngModel]="EmpFieldData.emp_id"
+                  />
+                  <input
+                    class="contact-input"
+                    id="name"
+                    name="name"
+                    type="text"
+                    placeholder="First name"
+                    [ngModel]="EmpFieldData.name"
+                  />
+                  <!-- <label class="contact-label" for="name">First Name*</label> -->
+                </div>
+                <div class="form__group field" style="margin-top: 1.5rem">
+                  <input
+                    class="contact-input"
+                    name="mobile"
+                    type="text"
+                    placeholder="mobile"
+                    [ngModel]="EmpFieldData.mobile"
+                  />
+                  <!-- <label class="contact-label" for="mobile">Mobile</label> -->
+                </div>
+                <div class="form__group field" style="margin-top: 1.5rem">
+                  <input
+                    class="contact-input"
+                    [ngModel]="EmpFieldData.salary"
+                    name="salary"
+                    type="text"
+                    placeholder="salary"
+                  />
+                  <!-- [(ngModel)]="EmpFieldData.mobile" two way binding -->
+                  <!-- <label class="contact-label" for="salary">salary</label> -->
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6">
+                <div class="">
+                  <input
+                    class="contact-input"
+                    [(ngModel)]="EmpFieldData.email"
+                    id="email"
+                    name="email"
+                    type="text"
+                    placeholder="email"
+                  />
+                  <!-- <label class="contact-label" for="email">email*</label> -->
+                </div>
+                <div class="" style="margin-top: 1.6rem">
+                  <textarea
+                    rows="3"
+                    class="contact-input"
+                    [ngModel]="EmpFieldData.address"
+                    name="Address"
+                    placeholder="Address"
+                    style="bottom: 0 !important"
+                  ></textarea>
+                  <!-- <label class="contact-label" for="message">Address</label> -->
+                  <br />
+                </div>
+              </div>
+            </div>
+            <hr />
+            <div class="mt-3">
+              <button class="btn btn-success" data-bs-dismiss="modal">
+                Update
+              </button>
+              <button
+                type="button"
+                class="btn btn-secondary mx-3"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- delete model -->
+  <div
+    class="modal fade"
+    id="exampleModal2"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">
+            Are You Sure You Want to Delete?
+          </h1>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <button
+            class="btn btn-success"
+            (click)="deleteEmployee(delEmpId)"
+            data-bs-dismiss="modal"
+          >
+            Yes
+          </button>
+          <button
+            type="button"
+            class="btn btn-secondary mx-3"
+            data-bs-dismiss="modal"
+          >
+            No
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
