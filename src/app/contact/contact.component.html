@@ -1,102 +1,122 @@
-<div class="bg-warning container-fluid">
+<div class="container-fluid">
   <div class="text-center">
     <h1 class="">Contact Us</h1>
   </div>
-  <div class="row">
-    <div class="col-lg-6">
-      <!-- <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
-        <input
-          type="text"
-          placeholder="Enter name"
-          name="user"
-          formControlName="user"
-        />
-        <br />
-        <span style="color: red" *ngIf="user && user.invalid && user.touched"
-          >This field is not valid</span
-        >
-        <br />
-        <input
-          type="password"
-          placeholder="Enter password"
-          name="password"
-          formControlName="password"
-        />
-        <br />
-        <br />
-        <button [disabled]="loginForm.invalid">Login</button>
-        <div class="spinner-border text-muted"></div>
-      </form> -->
-      <button class="btn btn-success" (click)="OpenContactComponent()">
-        ContactResponce
-      </button>
+  <div class="row mt-5">
+    <div class="col-lg-6 mb-4">
+      <div class="card h-100 contact-container py-4 mb-4">
+        <div class="card-body">
+          <div class="d-flex justify-content-center">
+            <i
+              style="font-size: 48px; color: #0dcaf0"
+              class="fa-solid fa-location-dot"
+            ></i>
+          </div>
+          <div class="mt-3">
+            <h5 class="text-center">RBIS Technology Private Limited</h5>
+          </div>
+          <div class="mt-3 text-center">
+            <span class="fw-bold">Office</span>
+            <p class="fw-bold">
+              A2 804 Pyramid County, Bhukum, <br />Pune, Maharashtra 412115
+            </p>
+          </div>
+          <div class="row text-center mt-4">
+            <div class="col">
+              <h1><i style="color: #0dcaf0" class="fa-solid fa-phone"></i></h1>
+              <p>+91 9356444317</p>
+            </div>
+            <div class="col">
+              <h1>
+                <i style="color: #0dcaf0" class="fa-solid fa-envelope"></i>
+              </h1>
+              <p>contact@rbistech.com</p>
+            </div>
+          </div>
+          <div class="rbis-logo d-flex justify-content-center mt-3">
+            <img src="\assets\rbislogo2.png" />
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="col-lg-6">
-      <form #ContactForm="ngForm" (ngSubmit)="loginUser(ContactForm.value)">
-        <div class="row mt-3">
-          <div class="col-lg-6">
-            <input
-              class="form-control form-control-lg"
-              type="text"
-              placeholder="First Name"
-              name="FirstName"
-              ngModel
-            />
+    <div class="col-lg-6 mt-4 mt-md-0 mb-4">
+      <div class="card contact-container py-4">
+        <div class="card-body">
+          <div class="d-flex justify-content-center pb-3">
+            <i style="font-size: 32px" class="fa-brands fa-facebook"></i>
+            <i
+              style="font-size: 32px"
+              class="fa-brands fa-square-instagram mx-5"
+            ></i>
+            <i style="font-size: 32px" class="fa-brands fa-linkedin"></i>
           </div>
-          <div class="col-lg-6 mt-lg-0 mt-3">
-            <input
-              class="form-control form-control-lg"
-              type="text"
-              placeholder="Last Name"
-              name="LastName"
-              ngModel
-            />
-          </div>
-        </div>
-        <div class="mt-3">
-          <input
-            type="number"
-            placeholder="Contact Number"
-            name="ContactNumber"
-            class="form-control form-control-lg"
-            ngModel
-          />
-        </div>
-        <div class="mt-3">
-          <input
-            class="form-control form-control-lg"
-            type="email"
-            placeholder="Email"
-            name="Email"
-            ngModel
-          />
-          <!-- formControlName="user"
+          <form #ContactForm="ngForm" (ngSubmit)="loginUser(ContactForm.value)">
+            <div class="row mt-3">
+              <div class="col-lg-6">
+                <input
+                  class="form-control form-control-lg"
+                  type="text"
+                  placeholder="First Name"
+                  name="FirstName"
+                  ngModel
+                />
+              </div>
+              <div class="col-lg-6 mt-lg-0 mt-3">
+                <input
+                  class="form-control form-control-lg"
+                  type="text"
+                  placeholder="Last Name"
+                  name="LastName"
+                  ngModel
+                />
+              </div>
+            </div>
+            <div class="mt-3">
+              <input
+                type="number"
+                placeholder="Contact Number"
+                name="ContactNumber"
+                class="form-control form-control-lg"
+                ngModel
+              />
+            </div>
+            <div class="mt-3">
+              <input
+                class="form-control form-control-lg"
+                type="email"
+                placeholder="Email"
+                name="Email"
+                ngModel
+              />
+              <!-- formControlName="user"
           <span style="color: red" *ngIf="user && user.invalid && user.touched"
             >This field is not valid</span
           > -->
+            </div>
+            <div class="mt-3">
+              <textarea
+                class="form-control textarea-form-control-lg"
+                type="text"
+                placeholder="Message"
+                rows="4"
+                ngModel
+                name="Message"
+              >
+              </textarea>
+            </div>
+            <div class="row mt-3">
+              <div class="col text-center">
+                <button
+                  style="background-color: #0dcaf0 !important"
+                  class="btn btn-blue w-100 px-5 text-center"
+                >
+                  submit
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
-        <div class="mt-3">
-          <textarea
-            class="form-control textarea-form-control-lg"
-            type="text"
-            placeholder="Message"
-            rows="4"
-            ngModel
-            name="Message"
-          >
-          </textarea>
-        </div>
-        <div class="row mt-3">
-          <div class="col text-center">
-            <button
-              style="background-color: #0dcaf0 !important"
-              class="btn btn-blue w-100 px-5 text-center"
-            >
-              submit
-            </button>
-          </div>
-        </div>
-      </form>
+      </div>
     </div>
   </div>
 </div>

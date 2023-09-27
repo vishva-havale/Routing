@@ -1,0 +1,17 @@
+.huntscaler{
+    height: 200px;
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    border-left: 9px solid black;
+    box-shadow: 0 30px 30px #0003;
+    
+}
+@media (max-width: 988px) {
+    .product-div {
+        display: flex;
+        justify-content: center !important;
+    }
+}

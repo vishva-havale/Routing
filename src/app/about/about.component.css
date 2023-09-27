@@ -1,3 +1,64 @@
-.container-fluid{
-height: 100vh !important;
+.hed-div {
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    color: white;
+}
+.about-img{
+    height: 350px;
+}
+.strength-card img{
+    height: 50px;
+    background-color: #0dcaf066;
+    border-radius: 50%;
+    padding: 8px;
+}
+.strength-card .card {
+    transition: transform .6s !important;
+    box-shadow: #00000026 0 15px 25px,
+    #0000000d 0 5px 10px !important;
+}
+.strength-card .card:hover {
+    transform: scale(1.1) !important;
+    
+}
+.value-container img{
+    height: 30rem !important;
+}
+.value-button .btn{
+    border-radius: 1rem;
+}
+.value-button button.active {
+    background-color: #0dcaf0;
+}
+.values-container2{
+    padding: 2rem !important;
+}
+.logos-container img{
+    height: 7rem !important;
+}
+.logos-container .card{
+    box-shadow: #0000003d 0 3px 8px;
+}
+.who-container img{
+    height: 35rem;
+}
+@media  (max-width:1000px){
+    .about-img {
+            height: 250px;
+        }
+    .value-container img {
+            height: 15rem !important;
+        }
+}
+@media (min-width:300px) and (max-width:1000px) {
+
+    .who-container img {
+        height: 25rem;
+    }
+}
+@media (max-width:300px){
+    .who-container img {
+            height: 15rem;
+        }
 }

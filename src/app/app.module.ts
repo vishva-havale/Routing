@@ -14,7 +14,10 @@ import {ReactiveFormsModule} from '@angular/forms';
 import { NoPageComponent } from './no-page/no-page.component';
 import {HttpClientModule} from '@angular/common/http';
 import { EmployeesComponent } from './employees/employees.component';
-import { OpenContactComponentComponent } from './open-contact-component/open-contact-component.component'
+import { OpenContactComponentComponent } from './open-contact-component/open-contact-component.component';
+import { ProductsComponent } from './products/products.component';
+import { ServicesComponent } from './services/services.component';
+import { PortfolioComponent } from './portfolio/portfolio.component'
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { OpenContactComponentComponent } from './open-contact-component/open-con
     FooterComponent,
     NoPageComponent,
     EmployeesComponent,
-    OpenContactComponentComponent
+    OpenContactComponentComponent,
+    ProductsComponent,
+    ServicesComponent,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,

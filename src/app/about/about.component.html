@@ -1,13 +1,284 @@
-<div class="bg-info container-fluid h-100 p-0 m-0" style="padding-top: 80px !important;">
-<p style="color: black;">about works!</p>
-<h1>helllo</h1>
-<div class="bg-danger d-flex" style="height: 500px; width: 100%;">
-    <div class=" bg-warning d-flex" style="height: 250px; width: 250px;">
-        <h1>ok</h1>
-        <h1>what</h1>
+<div class="container-fluid m-0 p-0 overflow-hidden">
+  <div class="container-fluid mx-0" style="padding-top: 50px">
+    <div data-aos="zoom-out-left" data-aos-duration="3000" class="px-0">
+      <img class="w-100 about-img" src="\assets\about-us-bg (1).jpg" />
+      <div class="hed-div" style="width: 50%">
+        <h1>Services</h1>
+        <h3>home > About</h3>
+      </div>
     </div>
-    <div class=" bg-success" style="height: 250px; width: 250px;">ok</div>
-    <div class=" bg-primary" style="height: 250px; width: 250px; position:sticky; top: 30px;">ok</div>
-    <div class=" bg-light" style="height: 250px; width: 250px;">ok</div>
-</div>
+  </div>
+  <div class="container row mx-auto">
+    <div class="py-5 col-md-4 com-lg-4 col-sm-12 strength-card">
+      <div class="card">
+        <div class="card-body d-flex justify-content-center">
+          <div>
+            <img src="\assets\innovation.png" />
+          </div>
+          <div class="ps-3">
+            <p style="font-size: 19px; font-weight: 700; margin-bottom: 0.5rem">
+              Innovation
+            </p>
+            <p>
+              We pride ourselves on our ability to think outside the box,
+              constantly pushing the boundaries of technology to deliver
+              cutting-edge solutions to your unique needs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="py-md-5 col-md-4 com-lg-4 col-sm-12 strength-card">
+      <div class="card">
+        <div class="card-body d-flex justify-content-center">
+          <div>
+            <img src="\assets\efficient.png" />
+          </div>
+          <div class="ps-3">
+            <p style="font-size: 19px; font-weight: 700; margin-bottom: 0.5rem">
+              Efficiency
+            </p>
+            <p>
+              We pride ourselves on our ability to think outside the box,
+              constantly pushing the boundaries of technology to deliver
+              cutting-edge solutions to your unique needs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="py-5 col-md-4 com-lg-4 col-sm-12 strength-card">
+      <div class="card">
+        <div class="card-body d-flex justify-content-center">
+          <div>
+            <img src="\assets\reliability.png" />
+          </div>
+          <div class="ps-3">
+            <p style="font-size: 19px; font-weight: 700; margin-bottom: 0.5rem">
+              Realibility
+            </p>
+            <p>
+              We pride ourselves on our ability to think outside the box,
+              constantly pushing the boundaries of technology to deliver
+              cutting-edge solutions to your unique needs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row value-container my-3">
+      <div
+        class="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-center align-items-center"
+      >
+        <img src="\assets\values.png" />
+      </div>
+      <div class="mt-4 mt-md-0 col-lg-6 col-md-6 col-sm-12">
+        <div class="value-button d-flex justify-content-center">
+          <button
+            class="btn"
+            (click)="showSection('mission')"
+            [ngClass]="{ active: selectedSection === 'mission' }"
+          >
+            Our Mission
+          </button>
+          <button
+            class="btn ms-3"
+            (click)="showSection('vision')"
+            [ngClass]="{ active: selectedSection === 'vision' }"
+          >
+            Our Vision
+          </button>
+        </div>
+        <div class="values-container2">
+          <div *ngIf="selectedSection === 'mission'">
+            <h1>Our Mission</h1>
+            <p>
+              At RBIS, our mission is to provide unparalleled IT solutions that
+              transcend boundaries and drive measurable value for our clients.
+            </p>
+            <p>
+              Through a relentless pursuit of innovation, we strive to empower
+              businesses and individuals with transformative technology,
+              enabling them to achieve their goals and stay ahead in an
+              ever-changing digital landscape.
+            </p>
+            <p>
+              With a focus on excellence and a commitment to customer success,
+              we strive to be the trusted partner in navigating the
+              ever-evolving landscape of technology, making a positive impact on
+              industries and society as a whole.
+            </p>
+          </div>
+          <div *ngIf="selectedSection === 'vision'">
+            <h1>Our Vision</h1>
+            <p>
+              Through cutting-edge technology and tailored solutions, we aim to
+              drive transformative change, connect the world, and unlock new
+              possibilities for our clients.
+            </p>
+            <p>
+              With a focus on excellence and a commitment to customer success,
+              we strive to be the trusted partner in navigating the
+              ever-evolving landscape of technology, making a positive impact on
+              industries and society as a whole.
+            </p>
+            <p>
+              We are committed to building strong, lasting partnerships with our
+              clients, understanding their unique challenges, and delivering
+              tailored solutions that cater to their specific needs.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid logos-container">
+      <div>
+        <h2 class="text-center">Technologies We Use</h2>
+      </div>
+      <div class="row pt-3">
+        <div class="col-6 col-lg-4 col-md-4 col-sm-6">
+          <div class="card">
+            <div class="card-body d-flex justify-content-center">
+              <img src="\assets\angular.png" />
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-4 col-md-4 col-sm-6">
+          <div class="card">
+            <div class="card-body d-flex justify-content-center">
+              <img src="\assets\react.png" />
+            </div>
+          </div>
+        </div>
+        <div class="pt-3 pt-md-0 col-12 col-lg-4 col-md-4 col-sm-12">
+          <div class="card">
+            <div class="card-body d-flex justify-content-center">
+              <img src="\assets\net.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row pt-3">
+        <div class="col-6 col-lg-4 col-md-4 col-sm-6">
+          <div class="card">
+            <div class="card-body d-flex justify-content-center">
+              <img src="\assets\node.png" />
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-4 col-md-4 col-sm-6">
+          <div class="card">
+            <div class="card-body d-flex justify-content-center">
+              <img src="\assets\mssql.png" />
+            </div>
+          </div>
+        </div>
+        <div class="pt-3 pt-md-0 col-12 col-lg-4 col-md-4 col-sm-12">
+          <div class="card">
+            <div class="card-body d-flex justify-content-center">
+              <img src="\assets\postgresql.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row py-3">
+        <div class="col-6 col-lg-4 col-md-4 col-sm-6">
+          <div class="card">
+            <div class="card-body d-flex justify-content-center">
+              <img src="\assets\aws.png" />
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-4 col-md-4 col-sm-6">
+          <div class="card">
+            <div class="card-body d-flex justify-content-center">
+              <img src="\assets\azure.png" />
+            </div>
+          </div>
+        </div>
+        <div class="pt-3 pt-md-0 col-12 col-lg-4 col-md-4 col-sm-12">
+          <div class="card">
+            <div class="card-body d-flex justify-content-center">
+              <img src="\assets\bootstrap.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid who-container my-5 mx-0 px-0">
+      <div class="row">
+        <div class="d-none d-md-block col-sm-12 col-12 col-md-6 col-lg-6">
+          <h1 class="text-center">Who we are</h1>
+          <p>
+            Welcome to RBIS Technology Pvt Ltd - Empowering Your Digital Future!
+            At RBIS Technology Pvt Ltd, we are more than just a small IT
+            startup; we are the architects of innovative solutions that drive
+            your business towards success in the digital age.
+          </p>
+          <p>
+            Our passion for technology and our commitment to excellence form the
+            very foundation of our company.
+          </p>
+          <p>
+            RBIS Technology Pvt Ltd is a dynamic and forward-thinking IT startup
+            with a relentless pursuit of excellence.
+          </p>
+          <p>
+            Established with a vision to revolutionize the technological
+            landscape, we are a team of dedicated professionals driven by
+            innovation, creativity, and a deep understanding of our clients'
+            needs.
+          </p>
+          <p>
+            At RBIS Technology, our mission is to empower businesses with
+            cutting-edge digital solutions that transform challenges into
+            opportunities.
+          </p>
+          <p>
+            We strive to be at the forefront of technological advancements,
+            offering tailored services and products that align perfectly with
+            the unique requirements of each client.
+          </p>
+        </div>
+        <div class="col-sm-12 col-12 col-md-6 col-lg-6">
+          <h1 class="text-center d-md-none">Who we are</h1>
+          <div class="d-flex justify-content-center">
+            <img src="\assets\who-we-are.png" />
+          </div>
+        </div>
+        <div class="d-md-none col-sm-12 col-12 col-md-6 col-lg-6">
+          <p>
+            Welcome to RBIS Technology Pvt Ltd - Empowering Your Digital Future!
+            At RBIS Technology Pvt Ltd, we are more than just a small IT
+            startup; we are the architects of innovative solutions that drive
+            your business towards success in the digital age.
+          </p>
+          <p>
+            Our passion for technology and our commitment to excellence form the
+            very foundation of our company.
+          </p>
+          <p>
+            RBIS Technology Pvt Ltd is a dynamic and forward-thinking IT startup
+            with a relentless pursuit of excellence.
+          </p>
+          <p>
+            Established with a vision to revolutionize the technological
+            landscape, we are a team of dedicated professionals driven by
+            innovation, creativity, and a deep understanding of our clients'
+            needs.
+          </p>
+          <p>
+            At RBIS Technology, our mission is to empower businesses with
+            cutting-edge digital solutions that transform challenges into
+            opportunities.
+          </p>
+          <p>
+            We strive to be at the forefront of technological advancements,
+            offering tailored services and products that align perfectly with
+            the unique requirements of each client.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

@@ -1,0 +1,23 @@
+.services-cont{
+    background-image: url(../../assets/services-bg.jpg);
+    height: 400px !important;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+.hed-div{
+    position: relative;
+    top:40%;
+    left: 5%;
+    color: white;
+}
+.product-img{
+    height: 26rem;
+    width: 400px;
+}
+@media (max-width: 990px) {
+    .product-img {
+        height: 20rem !important;
+        width: 300px !important;
+    }
+}

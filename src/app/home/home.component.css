@@ -1,6 +1,9 @@
 .home{
     background: url(../../assets/landing-page-bg.jpg);
     animation: zoom-out 10s;
+    overflow: hidden !important;
+    
+    
 }
 .why-rbis {
     background: url(../../assets/strength-bg.jpg);
@@ -85,6 +88,46 @@
     margin-top: 50px;
     padding-bottom: 50px !important;
 }
+.field-holder {
+    position: relative;
+    margin-bottom: 1.25em;
+}
+
+.field-holder input {
+    border: 0;
+    border-bottom: 3px solid #dfdfdf;
+    outline: none;
+}
+
+.field-holder label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #424242;
+    display: flex;
+    align-items: center;
+    cursor: text;
+}
+
+.field-holder input,
+label {
+    font-size: 1em;
+    width: 100%;
+    height: 55px;
+}
+
+.field-holder input:focus+label {
+    color: #424242;
+    font-size: .75em;
+    top: -25px;
+    pointer-events: none;
+}
+.input-div input:focus+label,textarea:focus+label {
+    color: white;
+    font-size: .85em;
+    top: -15px;
+    pointer-events: none;
+}
 .contact-input{
     /* width: 80%; */
     border: 0;
@@ -98,15 +141,22 @@
     transition:border-color .2s;
 }
 .contact-label{
-    font-size: 1rem;
-    cursor: text;
-    top: 20px;
     position: absolute;
-    display: block;
+        bottom: 0;
+        left: 0;
+        color: #424242;
+        display: flex;
+        align-items: center;
+        cursor: text;
+        transition: .9s ease-in-out;
+        font-size: 1rem;
+        cursor: text;
+    /*
+    
     transition: .2s;
     color: #9b9b9b;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 700; */
 }
 .contact-btn{
     background-color: #0dcaf0;
@@ -124,6 +174,82 @@
     padding:15px 0 0;
     width: 75%;
 }
+@keyframes slide {
+    from{
+        transform: translate(0);
+    }
+    to{
+        transform: translate(-100%);
+    }
+}
+
+.logos{
+    overflow: hidden;
+    padding: 60px 0;
+    background: white;
+    white-space: nowrap;
+    position: relative;
+}
+.logos-slide{
+    display: inline-block;
+    animation:10s slide infinite linear;
+}
+.logos-slide img{
+    height: 50px;
+    margin:0 40px;
+}
+.logos:hover .logos-slide{
+    animation-play-state: paused;
+}
+.logos:before{
+    left: 0;
+    background: linear-gradient(to left,rgba(255,255,255,0),white);
+}
+.logos::after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+.logos:before,
+.logos:after{
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+
+.field-holder{
+    position: relative;
+    margin-bottom: 1.25em;
+}
+.field-holder input{
+    border: 0;
+    border-bottom:3px solid #dfdfdf;
+    outline: none; 
+}
+.field-holder label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #424242;
+    display: flex;
+    align-items: center;
+    cursor: text;
+}
+.field-holder input,label{
+    font-size: 1em;
+    width: 100%;
+    height: 55px;
+}
+.field-holder input:focus +label{
+    color: #424242 ;
+    font-size: .75em;
+    top: -25px;
+    pointer-events: none;
+}
+
+
 
 @media (min-width: 400px) {
     .office-work-img {
